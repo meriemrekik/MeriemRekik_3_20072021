@@ -1,2 +1,5 @@
 *.pdf
 *.zip
+assets/images/maquettes
+assets/textes.txt
+node_modules
