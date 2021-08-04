@@ -2,50 +2,93 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="style.css" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
+    <title>La palette du goût</title>
   </head>
-  <body>
+  <body class="menu">
     <!--header-->
-    <header>
-      <img src="assets/images/logo/ohmyfood.png" alt="Ohmyfood-logo" /></br>
-      <img
-        src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-        alt="palette-du-goût"
-      />
-      <h1>La palette du goût</h1>
-      <i class="far fa-heart"></i>
+    <header class="menu-header">
+      <div class="menu-logo">
+        <img src="assets/images/logo/ohmyfood.png" alt="Ohmyfood-logo" /></br>
+      </div>
+      <figure class="page-img"><img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="palette-du-goût"/>
+      </figure>
+        <h1>La palette du goût</h1>
+        <i class="far fa-heart"></i>
     </header>
-       <!--sectien entree-->
-    <section entree>
-      <h2>Entrées</h2>
-      <h3>Fricassé d'escargot</h3>
-      <h4>Au piment d'espelette 25€</h4>
-      <h3>Fois gras de canard mi-cuit 35€</h3>
-      <h4>Et ses copeaux de truffle noire</h4>
-      <h3>Oeuf au plat</h3>
-      <h4>Assaisonné à la tfuffe sur lit de.... 20€</h4>
-    </section>
-    <section plats>
-      <h2>Plat</h2>
-      <h3>Filet de boeuf aux herbes</h3>
-      <h4>Accompagné de sa ribambelle de légu... 40€</h4>
-      <h3>Parmentier de queue de boeuf</h3>
-      <h4>A la truffe noire sur sa purée de panais 35€</h4>
-      <h3>Filet de Turbot</h3>
-      <h4>Aux agrumes 44€</h4>
-      <section desserts>
-        <h2>DESSSERTS</h2>
-        <h3>Paris-Brest</h3>
-        <h4>Revisité 18€</h4>
-        <h3>Macaron au chocolat d'exception</h3>
-        <h4>Et glace à la vanille de Madagascar 22€</h4>
-        <h3>Mousse au chocolat</h3>
-        <h4>Au piment d'espelette et à la truffe noire 23€</h4>
+
+    <section class="menu-plats">
+      <!--sectien entree-->
+       <section id="entree">
+          <h2>ENTRÉES</h2>
+          <div class="menu-entree">
+            <h3>Fricassé d'escargot</h3>
+            <h4>Au piment d'espelette</h4>
+            <span class="prix">25€</span>
+          </div>
+        
+          <div class="menu-entree">
+            <h3>Fois gras de canard mi-cuit </h3>
+            <h4>Et ses copeaux de truffle noire</h4>
+            <span class="prix">35€</span>
+          </div>
+
+          <div class="menu-entree">
+            <h3>Oeuf au plat</h3>
+            <h4>Assaisonné à la tfuffe sur lit de.... </h4>
+            <span class="prix">20€</span>
+         </div>
       </section>
+      <!--section plats-->
+      <section  id="plats">
+           <h2>Plat</h2>
+        <div class="menu-plats">
+          <h3>Filet de boeuf aux herbes</h3>
+          <h4>Accompagné de sa ribambelle de légu... </h4>
+          <span class="prix">40€</span>
+        </div>
+        <div class="menu-plats">
+          <h3>Parmentier de queue de boeuf</h3>
+          <h4>A la truffe noire sur sa purée de panais</h4>
+          <span class="prix"> 35€</span>
+        </div>
+        <div class="menu-plats">
+          <h3>Filet de Turbot</h3>
+          <h4>Aux agrumes </h4>
+          <span class="prix">44€</span>
+        </div>
+      </section>
+        <!--section dessert-->
+        <section id="desserts">
+           <h2>DESSSERTS</h2>
+             <div class="menu-desserts">
+             <h3>Paris-Brest</h3>
+             <h4>Revisité </h4>
+             <span class="prix">18€</span>
+            </div>
+            <div class="menu-desserts">
+              <h3>Macaron au chocolat d'exception</h3>
+              <h4>Et glace à la vanille de Madagascar</h4>
+              <span class="prix"> 22€</span>
+            </div>
+            <div class="menu-desserts">
+              <h3>Mousse au chocolat</h3>
+              <h4>Au piment d'espelette et à la truffe noire</h4>
+              <span class="prix">23€</span>
+            </div>
+        
+        </section>
     </section>
-    <input type="button" value="Commander" />
+    <section class="button-commander">
+      <input type="button" value="Commander" />
+    </section>
     <footer>
       <h2>Ohmyfood</h2>
       <ul>
