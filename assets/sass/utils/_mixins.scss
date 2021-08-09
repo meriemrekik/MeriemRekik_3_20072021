@@ -1,0 +1,20 @@
+@mixin mes-ombres {
+  box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);
+}
+
+@mixin police-titre {
+  font-family: "Shrikhand", cursive;
+}
+
+/* Media queries */
+@mixin pour_ordinateur {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin pour_tablette {
+  @media (min-width: 768px) {
+    @content;
+  }
+}

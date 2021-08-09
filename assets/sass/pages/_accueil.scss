@@ -1,6 +1,7 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
-/*section recherche*/
+/* section recherche */
 #recherche {
   width: 100%;
   background-color: map-get($map: $gray, $key: base);
@@ -37,12 +38,8 @@
   width: 60%;
   border-radius: 25px;
   border: 1px solid transparent;
-  box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);
-  background: linear-gradient(
-    to bottom right,
-    $color-secondaire,
-    $color-primaire
-  );
+  @include mes-ombres;
+  background: linear-gradient($color-secondaire, $color-primaire);
 }
 #reservation input:hover {
   background-color: $color-primaire;
@@ -60,11 +57,18 @@
     font-weight: bold;
     padding-bottom: 10px;
     font-size: 30px;
+    @include pour_tablette {
+      text-align: center;
+    }
   }
 
   ul {
     list-style-type: none;
     padding-left: 18px;
+    @include pour_tablette {
+      display: flex;
+      justify-content: space-between;
+    }
 
     .bloc-fonction__itemFonction {
       border: 1px solid transparent;
@@ -72,12 +76,15 @@
       width: 100%;
       display: flex;
       align-items: center;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: bold;
       border-radius: 15px;
       background-color: map-get($map: $gray, $key: light);
       margin-bottom: 18px;
-      box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);
+      @include mes-ombres;
+      @include pour_tablette {
+        width: 30%;
+      }
 
       &:hover {
         background-color: #eee;
@@ -88,9 +95,9 @@
 
   span.numero {
     margin-top: 2px;
-    height: 32px;
-    line-height: 32px;
-    width: 32px;
+    height: 23px;
+    line-height: 23px;
+    width: 23px;
     border-radius: 50%;
     border: 1px solid transparent;
     background-color: $color-primaire;
@@ -99,6 +106,7 @@
     position: relative;
     font-weight: bold;
     color: white;
+    font-size: 12px;
   }
 
   span.icone {
@@ -120,62 +128,67 @@
   background-color: map-get($map: $gray, $key: light);
   padding: 20px;
   padding-bottom: 75px;
-}
-.bloc-restaurants h2 {
-  font-size: 30px;
-  font-weight: bold;
-  padding-left: 5px;
-}
-.bloc-restaurants _element-restaurants {
-  background-color: white;
-  border-radius: 15px;
-  margin-bottom: 22px;
-  box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);
-}
-.bloc-restaurants .texte-restaurants {
-  padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-}
-.bloc-restaurants .texte-restaurants p {
-  font-size: 20px;
-  margin-top: 5px;
-}
-.bloc-restaurants .texte-restaurants i.far {
-  font-size: 30px;
-  padding-top: 9px;
-  padding-right: 13px;
-}
+  @include pour_tablette {
+    display: flex;
+    justify-content: space-between;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  .element-restaurants {
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 22px;
+    @include mes-ombres;
+  }
+  .texte-restaurants {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 20px;
+      margin-top: 5px;
+    }
+    i.far {
+      font-size: 30px;
+      padding-top: 9px;
+      padding-right: 13px;
+    }
 
-.bloc-restaurants .texte-restaurants a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-}
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
 
-.bloc-restaurants figure {
-  border-radius: 15px 15px 0 0;
-  object-fit: cover;
-  width: 100%;
-  height: 220px;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-}
-.bloc-restaurants figcaption {
-  width: 30%;
-  height: 30px;
-  background: $color-tertiaire;
-  color: #1d5c50e0;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  /* left: 0; */
-  right: 0;
-  /* bottom: 0; */
-  margin-right: 15px;
-  margin-top: 13px;
-  line-height: 30px;
-  font-weight: bold;
+  figure {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 220px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  figcaption {
+    width: 30%;
+    height: 30px;
+    background: $color-tertiaire;
+    color: #1d5c50e0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    right: 0;
+    /* bottom: 0; */
+    margin-right: 15px;
+    margin-top: 13px;
+    line-height: 30px;
+    font-weight: bold;
+    border-radius: 2px;
+  }
 }

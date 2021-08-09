@@ -1,0 +1,16 @@
+@import "../utils/variables";
+
+#entree .menu-entree {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+#entree .texte-pages {
+  padding-left: 10px;
+}
+#entre h3 {
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
