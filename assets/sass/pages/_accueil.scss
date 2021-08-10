@@ -128,67 +128,86 @@
   background-color: map-get($map: $gray, $key: light);
   padding: 20px;
   padding-bottom: 75px;
-  @include pour_tablette {
-    display: flex;
-    justify-content: space-between;
-  }
-  h2 {
-    font-size: 30px;
-    font-weight: bold;
-    padding-left: 5px;
-  }
-  .element-restaurants {
-    background-color: white;
-    border-radius: 15px;
-    margin-bottom: 22px;
-    @include mes-ombres;
-  }
-  .texte-restaurants {
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    p {
-      font-size: 20px;
-      margin-top: 5px;
+  .conteneur-principale {
+    @include pour_tablette {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
-    i.far {
+    h2 {
       font-size: 30px;
-      padding-top: 9px;
-      padding-right: 13px;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
       font-weight: bold;
-      font-size: 20px;
+      padding-left: 5px;
+      @include pour_tablette {
+        width: 100%;
+        text-align: center;
+      }
     }
-  }
+    .element-restaurants {
+      background-color: white;
+      border-radius: 15px;
+      margin-bottom: 22px;
+      @include mes-ombres;
+      @include pour_tablette {
+        width: 45%;
+      }
+      @include pour_ordinateur {
+        width: 23%;
+      }
+      a {
+        text-decoration: none;
+        &:visited {
+          color: inherit;
+        }
+      }
+      .texte-restaurants {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 20px;
+          margin-top: 5px;
+        }
+        i.far {
+          font-size: 30px;
+          padding-top: 9px;
+          padding-right: 13px;
+        }
 
-  figure {
-    border-radius: 15px 15px 0 0;
-    object-fit: cover;
-    width: 100%;
-    height: 220px;
-    margin: 0;
-    overflow: hidden;
-    position: relative;
-  }
-  figcaption {
-    width: 30%;
-    height: 30px;
-    background: $color-tertiaire;
-    color: #1d5c50e0;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    /* left: 0; */
-    right: 0;
-    /* bottom: 0; */
-    margin-right: 15px;
-    margin-top: 13px;
-    line-height: 30px;
-    font-weight: bold;
-    border-radius: 2px;
+        .texte-restaurants__titre {
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+
+      figure {
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        width: 100%;
+        height: 184px;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+      }
+      figcaption {
+        width: 30%;
+        height: 30px;
+        background: $color-tertiaire;
+        color: #1d5c50e0;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        /* left: 0; */
+        right: 0;
+        /* bottom: 0; */
+        margin-right: 15px;
+        margin-top: 13px;
+        line-height: 30px;
+        font-weight: bold;
+        border-radius: 2px;
+      }
+    }
   }
 }

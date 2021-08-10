@@ -1,6 +1,9 @@
 @mixin mes-ombres {
   box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);
 }
+@mixin background-degrade {
+  background: linear-gradient(#ff79da, #9356dc);
+}
 
 @mixin police-titre {
   font-family: "Shrikhand", cursive;

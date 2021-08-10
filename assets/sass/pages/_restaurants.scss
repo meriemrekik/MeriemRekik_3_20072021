@@ -1,16 +1,168 @@
+@import "../utils/mixins";
 @import "../utils/variables";
 
-#entree .menu-entree {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 10px;
+.page-restaurants {
+  // Presentation
+  .presentation {
+    .presentation__img {
+      margin: 0;
+      height: 200px;
+      @include pour_tablette {
+        height: 280px;
+      }
+      @include pour_ordinateur {
+        height: 350px;
+      }
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        @include pour_tablette {
+          height: 280px;
+        }
+        @include pour_ordinateur {
+          height: 350px;
+        }
+      }
+    }
+    .presentation__zone-texte {
+      padding: 25px 15px 10px 15px;
+      background-color: map-get($map: $gray, $key: light);
+
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      margin-top: -25px;
+      position: relative;
+      .conteneur-principale {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .presentation__titre {
+        @include police-titre;
+        margin: 0;
+        font-weight: 400;
+      }
+      .presentation__jaime {
+        font-size: 26px;
+        margin-right: 20px;
+        font-weight: 100;
+        &:hover {
+          @include background-degrade;
+        }
+      }
+    }
+  }
+
+  .menu {
+    background-color: map-get($map: $gray, $key: light);
+    .menu-element {
+      padding: 10px 0;
+      .menu-element__titre {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        margin-left: 15px;
+      }
+
+      .menu-element__tirets {
+        background-color: $color-tertiaire;
+        height: 3px;
+        width: 40px;
+        margin: 0;
+        border: none;
+        margin-left: 15px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+      }
+      .menu-element__conteneur {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include pour_tablette {
+          flex-direction: row;
+        }
+        .menu-element__plat {
+          background-color: white;
+          display: flex;
+          overflow: hidden;
+          justify-content: space-between;
+          align-items: flex-end;
+          max-height: 55px;
+          margin: 10px;
+          @include mes-ombres;
+          border-radius: 15px;
+          @include pour_tablette {
+            width: 30%;
+          }
+          .menu-element__texte {
+            padding: 10px;
+            width: 100%;
+            h3 {
+              margin: 0 0 5px;
+              font-size: 14px;
+              max-height: 17px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+            p {
+              margin: 0;
+              font-size: 12px;
+              max-height: 17px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+
+          .menu-element__prix {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+          .menu-element__selection {
+            display: none;
+            background-color: $color-tertiaire;
+            color: white;
+            width: 65px;
+            position: relative;
+            height: 55px;
+            line-height: 65px;
+            text-align: center;
+
+            .fas {
+              font-size: 25px;
+            }
+          }
+
+          &:hover {
+            .menu-element__selection {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-#entree .texte-pages {
-  padding-left: 10px;
-}
-#entre h3 {
-  margin-top: 8px;
-  margin-bottom: 5px;
+.button-commander {
+  text-align: center;
+  padding-bottom: 51px;
+  padding-top: 12px;
+  background-color: #f6f6f6;
+  width: 100%;
+  input {
+    height: 50px;
+    width: 47%;
+    max-width: 300px;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(#ff79da, #9356dc);
+    border: 1px solid transparent;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);
+  }
 }
