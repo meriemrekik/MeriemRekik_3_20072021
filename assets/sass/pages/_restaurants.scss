@@ -56,13 +56,26 @@
 
   .menu {
     background-color: map-get($map: $gray, $key: light);
+    > .conteneur-principale {
+      @include pour_ordinateur {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
     .menu-element {
       padding: 10px 0;
+      @include pour_ordinateur {
+        width: 32%;
+      }
       .menu-element__titre {
         margin: 0;
         font-weight: 400;
         font-size: 16px;
         margin-left: 15px;
+        @include pour_ordinateur {
+          text-align: center;
+          margin-left: 0;
+        }
       }
 
       .menu-element__tirets {
@@ -74,14 +87,15 @@
         margin-left: 15px;
         margin-top: 3px;
         margin-bottom: 5px;
+        @include pour_ordinateur {
+          margin: 0 auto;
+        }
       }
       .menu-element__conteneur {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        @include pour_tablette {
-          flex-direction: row;
-        }
+
         .menu-element__plat {
           background-color: white;
           display: flex;
@@ -92,9 +106,7 @@
           margin: 10px;
           @include mes-ombres;
           border-radius: 15px;
-          @include pour_tablette {
-            width: 30%;
-          }
+
           .menu-element__texte {
             padding: 10px;
             width: 100%;
