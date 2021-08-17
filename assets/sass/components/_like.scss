@@ -1,0 +1,38 @@
+.likeHeart {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  overflow: visible;
+  cursor: pointer;
+
+  i.far {
+    color: black;
+    transition: 300ms;
+    font-size: 1.2em;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  i.fas {
+    font-size: 1.2em;
+    transition: 300ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient($color-secondaire, $color-primaire);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  &:hover {
+    i.far {
+      opacity: 0;
+    }
+    i.fas {
+      opacity: 1;
+    }
+  }
+}

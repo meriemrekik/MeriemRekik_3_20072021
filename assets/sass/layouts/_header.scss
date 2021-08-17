@@ -1,13 +1,15 @@
 @import "../utils/variables";
 
 header {
-  text-align: center;
-  padding: 15px;
-  box-shadow: 0 4px 2px -2px map-get($map: $gray, $key: simple);
-  position: relative;
-  box-sizing: border-box;
   /* width: 101%;
   left: -2px;*/
+  .header__ombre {
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 4px 2px -2px map-get($map: $gray, $key: simple);
+  }
 
   img {
     width: 165px;

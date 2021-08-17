@@ -1,0 +1,23 @@
+@import "../utils/variables";
+
+input[type="button"] {
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient($color-secondaire, $color-primaire);
+  border: 1px solid transparent;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);
+
+  cursor: pointer;
+  &:hover {
+    transition: 200ms;
+    box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 45%);
+
+    background: linear-gradient(
+      lighten($color-secondaire, 5%),
+      lighten($color-primaire, 5%)
+    );
+  }
+}

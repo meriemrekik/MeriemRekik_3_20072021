@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prefixed/style.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -26,19 +26,21 @@
     <main>
       <!--header-->
       <header>
-        <div class="conteneur-principale">
-          <a href="index.html">
-            <img src="assets/images/logo/ohmyfood.png" alt="Ohmyfood-logo" />
-          </a>
+        <div class="header__ombre">
+          <div class="conteneur-principale">
+            <a href="index.html">
+              <img src="assets/images/logo/ohmyfood.png" alt="Ohmyfood-logo" />
+            </a>
+          </div>
+        </div>
+        <!--section recherche-->
+        <div id="recherche">
+          <div class="conteneur-principale">
+            <i class="far fa-map-marker-alt"></i>
+            <input type="text" value="Paris, Belleville" />
+          </div>
         </div>
       </header>
-      <!--section recherche-->
-      <div id="recherche">
-        <div class="conteneur-principale">
-          <i class="far fa-map-marker-alt"></i>
-          <input type="text" value="Paris, Belleville" />
-        </div>
-      </div>
 
       <!--section reservation-->
       <section id="reservation">
@@ -83,8 +85,10 @@
                 <img
                   src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 />
-                <figcaption>Nouveau</figcaption>
               </a>
+              <figcaption>
+                <a href="La_palette_du_gout.html">Nouveau</a>
+              </figcaption>
             </figure>
             <div class="texte-restaurants">
               <div class="texte">
@@ -95,7 +99,13 @@
                 >
                 <p><a href="La_palette_du_gout.html">Ménilmontant</a></p>
               </div>
-              <i class="far fa-heart"></i>
+              <!-- 
+               <i class="fas fa-heart"></i>
+              -->
+              <div class="likeHeart">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+              </div>
             </div>
           </div>
 
@@ -120,13 +130,13 @@
                 >
                 <p><a href="la-notre-enchantee.html">Charoone</a></p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="fas fa-heart"></i>
             </div>
           </div>
           <!--restaurant cite rouge-->
           <div class="element-restaurants">
             <figure>
-              <a href="a-la-française.html">
+              <a href="a-la-francaise.html">
                 <img
                   src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                   alt="restaurant cite rouge"
@@ -140,7 +150,7 @@
                 >
                 <p><a href="a-la-francaise.html">Cité Rouge</a></p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="fas fa-heart"></i>
             </div>
           </div>
 
@@ -163,7 +173,7 @@
                 >
                 <p><a href="le-delice-des-sens.html">Folie-Méricourt</a></p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="fas fa-heart"></i>
             </div>
           </div>
         </div>
@@ -190,5 +200,19 @@
         </div>
       </footer>
     </main>
+    <div class="loader">
+      <div class="loader_conteneur">
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
