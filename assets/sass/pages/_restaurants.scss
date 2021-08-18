@@ -141,6 +141,10 @@
                 font-size: 18px;
                 max-height: 20px;
               }
+              @include pour_ordinateur {
+                font-size: 14px;
+                max-height: 17px;
+              }
             }
             p {
               margin: 0;
@@ -155,6 +159,8 @@
               }
               @include pour_ordinateur {
                 max-width: 250px;
+                font-size: 12px;
+                max-height: 17px;
               }
             }
           }

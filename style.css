@@ -62,7 +62,6 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: "Shrikhand", cursive;
 }
 
 a {
@@ -761,6 +760,12 @@ header .header__boutton-retour {
     max-height: 20px;
   }
 }
+@media (min-width: 1200px) {
+  .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte h3 {
+    font-size: 14px;
+    max-height: 17px;
+  }
+}
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte p {
   margin: 0;
   font-size: 12px;
@@ -778,6 +783,8 @@ header .header__boutton-retour {
 @media (min-width: 1200px) {
   .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte p {
     max-width: 250px;
+    font-size: 12px;
+    max-height: 17px;
   }
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__prix {
