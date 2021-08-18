@@ -153,6 +153,9 @@
                 font-size: 17px;
                 max-height: 17px;
               }
+              @include pour_ordinateur {
+                max-width: 250px;
+              }
             }
           }
 

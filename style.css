@@ -123,7 +123,7 @@ input[type=button]:hover {
   opacity: 0;
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
 }
 .likeHeart:hover i.far {
   opacity: 0;
@@ -180,10 +180,6 @@ footer li a {
   footer ul li:last-child {
     margin-right: 0;
   }
-}
-header {
-  /* width: 101%;
-  left: -2px;*/
 }
 header .header__ombre {
   text-align: center;
@@ -770,6 +766,11 @@ header .header__boutton-retour {
   .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte p {
     font-size: 17px;
     max-height: 17px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte p {
+    max-width: 250px;
   }
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__prix {
