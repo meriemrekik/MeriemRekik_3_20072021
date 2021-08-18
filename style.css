@@ -123,6 +123,7 @@ input[type=button]:hover {
   opacity: 0;
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
 }
 .likeHeart:hover i.far {
