@@ -65,6 +65,13 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+a {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+
 main {
   position: relative;
 }
