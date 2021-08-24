@@ -48,13 +48,8 @@
         margin: 0;
         font-weight: 400;
       }
-      .presentation__jaime {
-        font-size: 26px;
-        margin-right: 20px;
-        font-weight: 100;
-        &:hover {
-          @include background-degrade;
-        }
+      .likeHeart {
+        top: -5px;
       }
     }
   }
@@ -107,7 +102,7 @@
           overflow: hidden;
           justify-content: space-between;
           align-items: flex-end;
-          max-height: 55px;
+          max-height: 65px;
           margin: 10px;
           @include mes-ombres;
           border-radius: 15px;
@@ -129,10 +124,12 @@
 
           .menu-element__texte {
             padding: 10px;
-            width: 100%;
+            // width: 100%;
+            overflow: hidden;
+            flex: 1;
             h3 {
               margin: 0 0 5px;
-              font-size: 14px;
+              font-size: 16px;
               max-height: 17px;
               text-overflow: ellipsis;
               overflow: hidden;
@@ -148,14 +145,14 @@
             }
             p {
               margin: 0;
-              font-size: 12px;
+              font-size: 15px;
               max-height: 17px;
               text-overflow: ellipsis;
               overflow: hidden;
               white-space: nowrap;
               @include pour_tablette {
                 font-size: 17px;
-                max-height: 17px;
+                max-height: 20px;
               }
               @include pour_ordinateur {
                 max-width: 250px;
@@ -174,21 +171,25 @@
             background-color: $color-tertiaire;
             color: white;
             width: 0;
+            // display: none;
             overflow: hidden;
             position: relative;
-            height: 55px;
-            line-height: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             transition: width 0.5s;
 
             .fas {
-              font-size: 25px;
+              font-size: 22px;
             }
           }
 
           &:hover {
             .menu-element__selection {
-              width: 65px;
+              width: 70px;
+              // display: block;
               .fas {
                 animation: fas 250ms;
               }

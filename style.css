@@ -91,7 +91,7 @@ input[type=button] {
   text-align: center;
   background: linear-gradient(#ff79da, #9356dc);
   border: 1px solid transparent;
-  font-size: 18px;
+  font-size: 14px;
   color: white;
   font-weight: bold;
   box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.1);
@@ -298,93 +298,28 @@ header .header__boutton-retour {
   display: flex;
   align-items: center;
 }
-.loader .loader_conteneur .lds-roller {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.loader .loader_conteneur .lds-roller div {
-  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  transform-origin: 40px 40px;
-}
-.loader .loader_conteneur .lds-roller div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 7px;
-  height: 7px;
+.loader .loader_conteneur .loader__animation {
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 120px;
+  height: 120px;
+  border: 10px solid #9356dc;
   border-radius: 50%;
-  background: #9356dc;
-  margin: -4px 0 0 -4px;
+  border-bottom-color: #ff79da;
+  border-top-color: #ff79da;
+  animation: chargeur 1.5s linear infinite;
 }
-.loader .loader_conteneur .lds-roller div:nth-child(1) {
-  animation-delay: -0.036s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(1):after {
-  top: 63px;
-  left: 63px;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(2) {
-  animation-delay: -0.072s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(2):after {
-  background-color: #ff79da;
-  top: 68px;
-  left: 56px;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(3) {
-  animation-delay: -0.108s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(3):after {
-  background-color: #99e2d0;
-  top: 71px;
-  left: 48px;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(4) {
-  animation-delay: -0.144s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(4):after {
-  top: 72px;
-  left: 40px;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(5) {
-  animation-delay: -0.18s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(5):after {
-  background-color: #ff79da;
-  top: 71px;
-  left: 32px;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(6) {
-  animation-delay: -0.216s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(6):after {
-  background-color: #99e2d0;
-  top: 68px;
-  left: 24px;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(7) {
-  animation-delay: -0.252s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(7):after {
-  top: 63px;
-  left: 17px;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(8) {
-  animation-delay: -0.288s;
-}
-.loader .loader_conteneur .lds-roller div:nth-child(8):after {
-  background-color: #ff79da;
-  top: 56px;
-  left: 12px;
-}
-@keyframes lds-roller {
+@keyframes chargeur {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.85);
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1);
   }
 }
 
@@ -468,7 +403,7 @@ header .header__boutton-retour {
     justify-content: space-between;
   }
 }
-.bloc-fonction ul .bloc-fonction__itemFonction {
+.bloc-fonction ul .bloc-fonction__item-Fonction {
   border: 1px solid transparent;
   height: 70px;
   width: 100%;
@@ -482,11 +417,11 @@ header .header__boutton-retour {
   box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 768px) {
-  .bloc-fonction ul .bloc-fonction__itemFonction {
+  .bloc-fonction ul .bloc-fonction__item-Fonction {
     width: 30%;
   }
 }
-.bloc-fonction ul .bloc-fonction__itemFonction:hover {
+.bloc-fonction ul .bloc-fonction__item-Fonction:hover {
   background-color: #eee;
   cursor: pointer;
 }
@@ -660,13 +595,8 @@ header .header__boutton-retour {
   margin: 0;
   font-weight: 400;
 }
-.page-restaurants .presentation .presentation__zone-texte .presentation__jaime {
-  font-size: 26px;
-  margin-right: 20px;
-  font-weight: 100;
-}
-.page-restaurants .presentation .presentation__zone-texte .presentation__jaime:hover {
-  background: linear-gradient(#ff79da, #9356dc);
+.page-restaurants .presentation .presentation__zone-texte .likeHeart {
+  top: -5px;
 }
 .page-restaurants .menu {
   background-color: #f6f6f6;
@@ -723,7 +653,7 @@ header .header__boutton-retour {
   overflow: hidden;
   justify-content: space-between;
   align-items: flex-end;
-  max-height: 55px;
+  max-height: 65px;
   margin: 10px;
   box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -744,11 +674,12 @@ header .header__boutton-retour {
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte {
   padding: 10px;
-  width: 100%;
+  overflow: hidden;
+  flex: 1;
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte h3 {
   margin: 0 0 5px;
-  font-size: 14px;
+  font-size: 16px;
   max-height: 17px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -768,7 +699,7 @@ header .header__boutton-retour {
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte p {
   margin: 0;
-  font-size: 12px;
+  font-size: 15px;
   max-height: 17px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -777,7 +708,7 @@ header .header__boutton-retour {
 @media (min-width: 768px) {
   .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__texte p {
     font-size: 17px;
-    max-height: 17px;
+    max-height: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -798,16 +729,18 @@ header .header__boutton-retour {
   width: 0;
   overflow: hidden;
   position: relative;
-  height: 55px;
-  line-height: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   transition: width 0.5s;
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat .menu-element__selection .fas {
-  font-size: 25px;
+  font-size: 22px;
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat:hover .menu-element__selection {
-  width: 65px;
+  width: 70px;
 }
 .page-restaurants .menu .menu-element .menu-element__conteneur .menu-element__plat:hover .menu-element__selection .fas {
   animation: fas 250ms;
