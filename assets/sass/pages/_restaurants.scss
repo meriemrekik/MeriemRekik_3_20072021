@@ -50,6 +50,8 @@
       }
       .likeHeart {
         top: -5px;
+        font-size: 20px;
+        right: 30px;
       }
     }
   }
@@ -209,14 +211,6 @@
   input {
     height: 50px;
     width: 47%;
-    max-width: 300px; /*
-    border-radius: 30px;
-    text-align: center;
-    background: linear-gradient(#ff79da, #9356dc);
-    border: 1px solid transparent;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    box-shadow: 4px 4px 10px -2px rgb(0 0 0 / 10%);*/
+    max-width: 300px;
   }
 }
