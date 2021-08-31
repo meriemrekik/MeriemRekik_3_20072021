@@ -34,7 +34,7 @@
     opacity: 1;
   }
 }
-@keyframes menu-element__selection {
+/*@keyframes menu-element__selection {
   0% {
     width: 0;
     opacity: 0;
@@ -42,7 +42,7 @@
   100% {
     opacity: 1;
   }
-}
+}*/
 @keyframes fas {
   0% {
     opacity: 0;
@@ -259,7 +259,7 @@ header .header__boutton-retour {
     opacity: 1;
   }
 }
-@keyframes menu-element__selection {
+/*@keyframes menu-element__selection {
   0% {
     width: 0;
     opacity: 0;
@@ -267,7 +267,7 @@ header .header__boutton-retour {
   100% {
     opacity: 1;
   }
-}
+}*/
 @keyframes fas {
   0% {
     opacity: 0;
