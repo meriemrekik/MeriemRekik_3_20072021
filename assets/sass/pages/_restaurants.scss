@@ -2,7 +2,6 @@
 @import "../utils/variables";
 
 .page-restaurants {
-  // Presentation
   .presentation {
     .presentation__img {
       margin: 0;
@@ -36,7 +35,6 @@
 
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
-      // margin-top: -25px;
 
       .conteneur-principale {
         display: flex;
@@ -126,7 +124,6 @@
 
           .menu-element__texte {
             padding: 10px;
-            // width: 100%;
             overflow: hidden;
             flex: 1;
             h3 {
@@ -173,7 +170,6 @@
             background-color: $color-tertiaire;
             color: white;
             width: 0;
-            // display: none;
             overflow: hidden;
             position: relative;
             height: 65px;
