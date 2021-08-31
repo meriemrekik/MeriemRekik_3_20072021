@@ -32,7 +32,10 @@
 }
 #reservation input {
   height: 52px;
-  width: 36%;
+  width: 60%;
+  @include pour_ordinateur {
+    width: 36%;
+  }
 }
 
 /*section fonctionnement*/
