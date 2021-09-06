@@ -1,0 +1,212 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.page-restaurants {
+  .presentation {
+    .presentation__img {
+      margin: 0;
+      position: relative;
+      height: 250px;
+      @include pour_tablette {
+        height: 340px;
+      }
+      @include pour_ordinateur {
+        height: 380px;
+      }
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        @include pour_tablette {
+          height: 340px;
+        }
+        @include pour_ordinateur {
+          height: 350px;
+        }
+      }
+    }
+    .presentation__zone-texte {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      padding: 25px 15px 10px 15px;
+      background-color: map-get($map: $gray, $key: light);
+
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+
+      .conteneur-principale {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .presentation__titre {
+        @include police-titre;
+        margin: 0;
+        font-weight: 400;
+      }
+      .likeHeart {
+        top: -5px;
+        font-size: 20px;
+        right: 30px;
+      }
+    }
+  }
+
+  .menu {
+    background-color: map-get($map: $gray, $key: light);
+    > .conteneur-principale {
+      @include pour_ordinateur {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .menu-element {
+      padding: 10px 0;
+      @include pour_ordinateur {
+        width: 32%;
+      }
+      .menu-element__titre {
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        margin-left: 15px;
+        @include pour_ordinateur {
+          text-align: center;
+          margin-left: 0;
+        }
+      }
+
+      .menu-element__tirets {
+        background-color: $color-tertiaire;
+        height: 3px;
+        width: 40px;
+        margin: 0;
+        border: none;
+        margin-left: 15px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        @include pour_ordinateur {
+          margin: 0 auto;
+        }
+      }
+      .menu-element__conteneur {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .menu-element__plat {
+          background-color: white;
+          display: flex;
+          overflow: hidden;
+          justify-content: space-between;
+          align-items: flex-end;
+          max-height: 65px;
+          margin: 10px;
+          @include mes-ombres;
+          border-radius: 15px;
+          animation-fill-mode: forwards;
+          animation-name: menu;
+          animation-duration: 2s;
+          animation-delay: 0.5s;
+          opacity: 0;
+
+          &:nth-child(2) {
+            animation-delay: 0.7s;
+          }
+          &:nth-child(3) {
+            animation-delay: 0.9s;
+          }
+          &:nth-child(4) {
+            animation-delay: 1.1s;
+          }
+
+          .menu-element__texte {
+            padding: 10px;
+            overflow: hidden;
+            flex: 1;
+            h3 {
+              margin: 0 0 5px;
+              font-size: 16px;
+              max-height: 17px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              @include pour_tablette {
+                font-size: 18px;
+                max-height: 20px;
+              }
+              @include pour_ordinateur {
+                font-size: 14px;
+                max-height: 17px;
+              }
+            }
+            p {
+              margin: 0;
+              font-size: 15px;
+              max-height: 17px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              @include pour_tablette {
+                font-size: 17px;
+                max-height: 20px;
+              }
+              @include pour_ordinateur {
+                max-width: 250px;
+                font-size: 12px;
+                max-height: 17px;
+              }
+            }
+          }
+
+          .menu-element__prix {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+          .menu-element__selection {
+            background-color: $color-tertiaire;
+            color: white;
+            width: 0;
+            overflow: hidden;
+            position: relative;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: width 0.5s;
+
+            .fas {
+              font-size: 22px;
+            }
+          }
+
+          &:hover {
+            .menu-element__selection {
+              width: 70px;
+              // display: block;
+              .fas {
+                animation: fas 250ms;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.button-commander {
+  text-align: center;
+  padding-bottom: 51px;
+  padding-top: 12px;
+  background-color: #f6f6f6;
+  width: 100%;
+  input {
+    height: 50px;
+    width: 47%;
+    max-width: 300px;
+  }
+}
