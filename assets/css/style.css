@@ -34,15 +34,6 @@
     opacity: 1;
   }
 }
-/*@keyframes menu-element__selection {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}*/
 @keyframes fas {
   0% {
     opacity: 0;
@@ -259,15 +250,6 @@ header .header__boutton-retour {
     opacity: 1;
   }
 }
-/*@keyframes menu-element__selection {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}*/
 @keyframes fas {
   0% {
     opacity: 0;
@@ -348,17 +330,18 @@ header .header__boutton-retour {
 }
 
 #reservation h1 {
-  font-size: 30px;
+  font-size: 32px;
   text-align: center;
 }
 
 #reservation p {
-  font-size: 20px;
+  font-size: 18px;
+  padding-left: 12px;
 }
 
 #reservation input {
   height: 52px;
-  width: 70%;
+  width: 64%;
 }
 @media (min-width: 1200px) {
   #reservation input {
@@ -385,7 +368,7 @@ header .header__boutton-retour {
 }
 .bloc-fonction ul {
   list-style-type: none;
-  padding-left: 18px;
+  padding-left: 0;
 }
 @media (min-width: 768px) {
   .bloc-fonction ul {
@@ -402,7 +385,7 @@ header .header__boutton-retour {
   font-size: 16px;
   font-weight: bold;
   border-radius: 15px;
-  background-color: #c3c3c363;
+  background-color: #e9e9e9;
   margin-bottom: 18px;
   box-shadow: 4px 4px 10px -2px rgba(0, 0, 0, 0.1);
 }
@@ -432,7 +415,7 @@ header .header__boutton-retour {
 }
 .bloc-fonction span.icone {
   margin-left: 4px;
-  margin-right: 20px;
+  margin-right: 14px;
   color: #353535;
   width: 30px;
   text-align: center;
@@ -499,6 +482,8 @@ header .header__boutton-retour {
 }
 .bloc-restaurants .conteneur-principale .element-restaurants .texte-restaurants .likeHeart {
   font-size: 22px;
+  margin-top: 12px;
+  padding-right: 14px;
 }
 .bloc-restaurants .conteneur-principale .element-restaurants .texte-restaurants .texte-restaurants__titre {
   text-decoration: none;
