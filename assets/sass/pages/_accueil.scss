@@ -26,12 +26,13 @@
   background-color: map-get($map: $gray, $key: light);
 }
 #reservation h1 {
-  font-size: 32px;
+  font-size: 30px;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 #reservation p {
   font-size: 18px;
-  padding-left: 12px;
+  padding-left: 15px;
 }
 #reservation input {
   height: 52px;
