@@ -85,6 +85,11 @@
       &:hover {
         background-color: #eee;
         cursor: pointer;
+
+        span.icone {
+          color: $color-primaire;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -111,11 +116,6 @@
     color: map-get($map: $gray, $key: dark);
     width: 30px;
     text-align: center;
-
-    &:hover {
-      color: $color-primaire;
-      cursor: pointer;
-    }
   }
 }
 

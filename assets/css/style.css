@@ -399,6 +399,10 @@ header .header__boutton-retour {
   background-color: #eee;
   cursor: pointer;
 }
+.bloc-fonction ul .bloc-fonction__item-Fonction:hover span.icone {
+  color: #9356dc;
+  cursor: pointer;
+}
 .bloc-fonction span.numero {
   margin-top: 2px;
   height: 23px;
@@ -420,10 +424,6 @@ header .header__boutton-retour {
   color: #353535;
   width: 30px;
   text-align: center;
-}
-.bloc-fonction span.icone:hover {
-  color: #9356dc;
-  cursor: pointer;
 }
 
 /*section restaurants*/
